@@ -31,7 +31,9 @@ int main() {
         cout << "1. Withdraw" << endl;
         cout << "2. Deposit" << endl;
         cout << "3. Check Balance" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. Calculate Interest" << endl;
+        
+        cout << "6. Exit" << endl;
         cout << "Choose an option: ";
         cin >> choice;
 
@@ -63,8 +65,13 @@ int main() {
             case 3:
                 cout << "Your current balance: " << balance << endl;
                 break;
-
             case 4:
+               double interest = balance * 0.05; // حساب فائدة 5%
+               cout << "Interest (5%): " << interest << endl;
+               cout << "Total after interest: " << (balance + interest) << endl;
+               break;
+
+            case 6:
                 cout << "Thank you for using the ATM!" << endl;
                 break;
 
