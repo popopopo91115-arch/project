@@ -32,6 +32,7 @@ int main() {
         cout << "2. Deposit" << endl;
         cout << "3. Check Balance" << endl;
         cout << "4. Calculate Interest" << endl;
+        cout << "5. Account Status" << endl;
         
         cout << "6. Exit" << endl;
         cout << "Choose an option: ";
@@ -70,6 +71,13 @@ int main() {
                cout << "Interest (5%): " << interest << endl;
                cout << "Total after interest: " << (balance + interest) << endl;
                break;
+            case 5:
+    if (balance < 100) {
+        cout << "Status: Low Balance! Please deposit soon." << endl;
+    } else {
+        cout << "Status: Active & Healthy." << endl;
+    }
+    break;
 
             case 6:
                 cout << "Thank you for using the ATM!" << endl;
